@@ -17,3 +17,41 @@ Questo progetto è un sistema di gestione degli acquisti per un negozio che vend
 - Verrà suggerito il miglior fornitore evidenziando quello con il prezzo scontato più conveniente.
 - Inoltre, verranno visualizzati i giorni minimi necessari per la spedizione di ciascun fornitore.
 - Seguire le istruzioni a schermo per completare l'ordine di acquisto.
+
+# Di seguito fornisco un ampliamento per spiegare le strutture utilizzate nel sistema e come sono collegate tra loro con gli attributi corrispondenti:
+
+Tabella "Articoli":
+
+id: Identificatore univoco dell'articolo (chiave primaria).
+nome: Nome dell'articolo.
+prezzo_vendita: Prezzo fisso di vendita dell'articolo.
+Tabella "Fornitori":
+
+id: Identificatore univoco del fornitore (chiave primaria).
+nome: Nome del fornitore.
+Tabella "Sconti":
+
+id: Identificatore univoco dello sconto (chiave primaria).
+fornitore_id: ID del fornitore associato (chiave esterna alla tabella "Fornitori").
+valore_minimo: Valore minimo dell'ordine per applicare lo sconto.
+percentuale_sconto: Percentuale di sconto offerta.
+data_inizio: Data di inizio validità dello sconto.
+data_fine: Data di fine validità dello sconto.
+Tabella "Magazzino":
+
+articolo_id: ID dell'articolo presente in magazzino (chiave esterna alla tabella "Articoli").
+fornitore_id: ID del fornitore che fornisce l'articolo in magazzino (chiave esterna alla tabella "Fornitori").
+quantita: Quantità disponibile dell'articolo nel magazzino.
+Tabella "Ordini":
+
+id: Identificatore univoco dell'ordine (chiave primaria).
+articolo_id: ID dell'articolo nell'ordine (chiave esterna alla tabella "Articoli").
+fornitore_id: ID del fornitore selezionato per l'ordine (chiave esterna alla tabella "Fornitori").
+quantita: Quantità di articoli richiesti nell'ordine.
+importo_totale: Importo totale dell'ordine calcolato applicando gli sconti (se disponibili).
+giorni_minimi_spedizione: Numero minimo di giorni richiesti per la spedizione dell'ordine dal fornitore selezionato.
+Le tabelle sono collegate tra loro attraverso le seguenti relazioni:
+
+La tabella "Magazzino" collega gli articoli e i fornitori, consentendo di tener traccia delle quantità disponibili di ogni articolo da ogni fornitore.
+La tabella "Sconti" è collegata alla tabella "Fornitori" attraverso l'attributo fornitore_id, permettendo di associare sconti specifici a un determinato fornitore.
+Le tabelle "Articoli" e "Fornitori" sono collegate rispettivamente alle tabelle "Magazzino" e "Ordini" utilizzando gli attributi articolo_id e fornitore_id.
