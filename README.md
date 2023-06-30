@@ -9,14 +9,7 @@ Questo progetto è un sistema di gestione degli acquisti per un negozio che vend
 - Suggerimento del miglior fornitore in base al prezzo scontato e ai giorni minimi di spedizione.
 - Gestione dei dati dei fornitori, degli articoli e del magazzino tramite tabelle SQL.
 
-## Uso
-
-- All'avvio, il sistema mostrerà un elenco di articoli disponibili nel magazzino con le rispettive quantità.
-- Selezionare un articolo e specificare la quantità desiderata.
-- Il sistema calcolerà automaticamente l'importo totale dell'ordine di acquisto considerando gli sconti applicabili dai fornitori.
-- Verrà suggerito il miglior fornitore evidenziando quello con il prezzo scontato più conveniente.
-- Inoltre, verranno visualizzati i giorni minimi necessari per la spedizione di ciascun fornitore.
-- Seguire le istruzioni a schermo per completare l'ordine di acquisto.
+## Struttura
 
 Di seguito fornisco un ampliamento per spiegare le strutture utilizzate nel sistema e come sono collegate tra loro con gli attributi corrispondenti:
 1.	Tabella "Articoli":
