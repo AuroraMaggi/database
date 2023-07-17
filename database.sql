@@ -2,7 +2,8 @@
 CREATE TABLE Articoli (
     ID INT PRIMARY KEY,
     Nome VARCHAR(100),
-    PrezzoVendita DECIMAL(10, 2)
+    PrezzoVendita SMALLINT,
+    Quantita DECIMAL(50)
 );
 
 -- Tabella per i fornitori
@@ -46,15 +47,15 @@ CREATE TABLE Ordini (
 );
 
 -- Inserimento dei dati relativi agli articoli, magazzino, fornitori e agli sconti dei fornitori
-INSERT INTO Articoli (ID, Nome, PrezzoVendita)
-VALUES (1, 'Articolo 1', 10.00),
-       (2, 'Articolo 2', 15.00),
-       (3, 'Articolo 3', 20.00);
+INSERT INTO Articoli (ID, Nome, PrezzoVendita, Quantita)
+VALUES (1, 'pc', 320.00, 8),
+       (2, 'mouse', 15.90, 24),
+       (3, 'monitor', 86.00, 12);
        
 INSERT INTO Fornitori (ID, Nome, GiorniSpedizione)
-VALUES (1, 'Fornitore A', 3),
-       (2, 'Fornitore B', 2),
-       (3, 'Fornitore C', 5);
+VALUES (1, 'Fornitore A', 5),
+       (2, 'Fornitore B', 7),
+       (3, 'Fornitore C', 4);
 
 INSERT INTO ScontiFornitori (ID, FornitoreID, ImportoMinimo, PercentualeSconto, DataInizio, DataFine)
 VALUES (1, 1, 50.00, 0.1, '2023-01-01', '2023-12-31'),
