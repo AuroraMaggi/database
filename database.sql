@@ -2,8 +2,7 @@
 CREATE TABLE Articoli (
     ID INT PRIMARY KEY,
     Nome VARCHAR(100),
-    PrezzoVendita SMALLINT,
-    Quantita DECIMAL(50)
+    PrezzoVendita SMALLINT
 );
 
 -- Tabella per i fornitori
