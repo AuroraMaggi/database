@@ -1,8 +1,18 @@
+# Presentazione generale
+
+<<https://amaggi.altervista.org/TEST_REGESTA/finale/index.html>>
+
+Il sito web fornito si mostra con un modulo di inserimento di valori e pulsanti per visualizzare tabelle di dati. L'obiettivo principale del codice è consentire all'utente di inserire dati tramite il modulo e visualizzare tabelle di dati attraverso i pulsanti.
+
+La sezione "Inserimento valori" del modulo presenta campi di input per l'ID, il nome e il prezzo di vendita di un articolo. L'utente può inserire i valori desiderati in questi campi e fare clic sul pulsante "Inserisci" per inviare i dati al server, utilizzando il codice in PHP "inserimento.php".
+
+La sezione "Visualizzazione tabelle" offre due pulsanti. Il primo pulsante, denominato "Visualizza", consente di visualizzare un elenco degli articoli disponibili. Il secondo pulsante, contrassegnato come "ANCORA IN FASE DI GESTIONE", è destinato a mostrare i dati e le informazioni dei fornitori, ma attualmente è ancora in fase di sviluppo.
+
 # Sistema di Gestione degli Acquisti per il Negozio
 
 Questo progetto è un sistema di gestione degli acquisti per un negozio che vende beni provenienti da diversi fornitori. Il sistema consente di selezionare un articolo e una quantità desiderata e calcola l'importo totale dell'ordine di acquisto applicando gli sconti disponibili dai fornitori. Inoltre, suggerisce il miglior fornitore evidenziando quello con il prezzo più conveniente e visualizza i giorni minimi necessari per la spedizione di ciascun fornitore.
 
-## Funzionalità principali
+## Funzionalità principali 
 
 - Visualizzazione dell'elenco degli articoli disponibili nel magazzino e delle relative quantità.
 - Calcolo dell'importo totale dell'ordine di acquisto in base al prezzo di vendita e agli sconti dei fornitori.
