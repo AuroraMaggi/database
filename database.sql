@@ -47,9 +47,9 @@ CREATE TABLE Ordini (
 
 -- Inserimento dei dati relativi agli articoli, magazzino, fornitori e agli sconti dei fornitori
 INSERT INTO Articoli (ID, Nome, PrezzoVendita, Quantita)
-VALUES (1, 'pc', 320.00, 8),
-       (2, 'mouse', 15.90, 24),
-       (3, 'monitor', 86.00, 12);
+VALUES (1, 'pc', 320.00),
+       (2, 'mouse', 15.90),
+       (3, 'monitor', 86.00);
        
 INSERT INTO Fornitori (ID, Nome, GiorniSpedizione)
 VALUES (1, 'Fornitore A', 5),
@@ -68,16 +68,3 @@ VALUES (1, 1, 1, 100),
        (4, 2, 3, 100),
        (5, 3, 2, 70),
        (6, 3, 3, 120);
-
--- Esempio di query per trovare il fornitore più economico per un determinato articolo e quantità, considerando gli sconti applicabili
-SELECT A.ID AS ArticoloID, A.Nome AS NomeArticolo, F.ID AS FornitoreID, F.Nome AS NomeFornitore, 
-       (A.PrezzoVendita * O.Quantita * (1 - COALESCE(S.PercentualeSconto, 0))) AS ImportoTotale,
-       F.GiorniSpedizione
-FROM Articoli A
-JOIN Magazzino M ON A.ID = M.ArticoloID
-JOIN Fornitori F ON M.FornitoreID = F.ID
-LEFT JOIN ScontiFornitori S ON F.ID = S.FornitoreID
-LEFT JOIN Ordini O ON O.ArticoloID = A.ID AND O.FornitoreID = F.ID
-WHERE A.ID = 1 -- ID dell'articolo desiderato
-  AND M.Quantita >= 10 -- Quantità desiderata
-ORDER BY ImportoTotale ASC, F.GiorniSpedizione ASC;
