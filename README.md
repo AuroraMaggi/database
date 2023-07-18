@@ -8,18 +8,18 @@ La sezione "Inserimento valori" del modulo presenta campi di input per l'ID, il 
 
 La sezione "Visualizzazione tabelle" offre due pulsanti. Il primo pulsante, denominato "Visualizza", consente di visualizzare un elenco degli articoli disponibili. Il secondo pulsante, contrassegnato come "ANCORA IN FASE DI GESTIONE", è destinato a mostrare i dati e le informazioni dei fornitori, ma attualmente è ancora in fase di sviluppo.
 
-# Sistema di Gestione degli Acquisti per il Negozio
+## Sistema di Gestione degli Acquisti per il Negozio
 
 Questo progetto è un sistema di gestione degli acquisti per un negozio che vende beni provenienti da diversi fornitori. Il sistema consente di selezionare un articolo e una quantità desiderata e calcola l'importo totale dell'ordine di acquisto applicando gli sconti disponibili dai fornitori. Inoltre, suggerisce il miglior fornitore evidenziando quello con il prezzo più conveniente e visualizza i giorni minimi necessari per la spedizione di ciascun fornitore.
 
-## Funzionalità principali 
+### Funzionalità principali 
 
 - Visualizzazione dell'elenco degli articoli disponibili nel magazzino e delle relative quantità.
 - Calcolo dell'importo totale dell'ordine di acquisto in base al prezzo di vendita e agli sconti dei fornitori.
 - Suggerimento del miglior fornitore in base al prezzo scontato e ai giorni minimi di spedizione.
 - Gestione dei dati dei fornitori, degli articoli e del magazzino tramite tabelle SQL.
 
-## Struttura
+### Struttura
 
 Di seguito fornisco un ampliamento per spiegare le strutture utilizzate nel sistema e come sono collegate tra loro con gli attributi corrispondenti:
 1.	Tabella "Articoli":
